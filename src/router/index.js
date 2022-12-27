@@ -1,22 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// import mingxi from '@/components/mingxi'
+import purse from '../views/purse.vue'
+import mingxi from '../views/mingxi.vue'
+import withdraw from '../views/withdraw.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/purse',
+    name: 'purse',
+    component: purse
+    // children: [
+    //   {
+    //     path: 'mingxi',
+    //     name: 'mingxi',
+    //     component: mingxi
+    //   }
+    // ]
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/mingxi',
+    name: 'mingxi',
+    component: mingxi
+  },
+  {
+    path: '/withdraw',
+    name: 'withdraw',
+    component: withdraw
   }
 ]
 
